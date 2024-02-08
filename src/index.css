@@ -1,0 +1,182 @@
+/* Cool background gradient idea: https://codepen.io/redstapler/pen/LMyLxP */
+
+:root {
+  --darkPurple: #471ca8;
+  --purple: #884ab2;
+  --orangeLight: #ff930a;
+  --orange: #f24b04;
+  --pink: #d1105a;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% }
+  100% { background-position: 100% }
+}
+
+.text-darkPurple {
+  color: var(--darkPurple);
+}
+.text-purple {
+  color: var(--purple);
+}
+.text-orangeLight {
+  color: var(--orangeLight);
+}
+.text-orange {
+  color: var(--orange);
+}
+.text-pink {
+  color: var(--pink);
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #471ca8;
+  background: linear-gradient(45deg, var(--darkPurple), var(--purple), var(--orange), var(--orangeLight));
+  background-size: 600% 100%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  background-size: 600% 100%;
+}
+
+button {
+  margin: 40px 0;
+  border-radius: 50px;
+  padding: 20px 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+h1 #lives span, #guessed-letters {
+  font-size: 1.5rem;
+}
+
+#game-over h2 {
+  font-size: 2.5rem;
+}
+
+#lives {
+  margin-left: 15px;
+}
+
+#lives span {
+  margin-right: 5px;
+}
+
+#root, main {
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#word-display, #game-over {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+#game-over {
+  flex-direction: column;
+}
+
+#word-display span {
+  font-size: 4rem;
+  text-align: center;
+  margin: 20px;
+  text-shadow: -10px -10px 20px var(--darkPurple);
+}
+
+#guessed-letters {
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* CSS Spinner from loading.io: https://loading.io/css/ */
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
