@@ -7,11 +7,6 @@ A word guess game for the "React Hooks Lunch N Learn" demonstrating `useState`, 
 * [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html)
 * [usehooks.com](https://usehooks.com/)
 
-## Shout-outs
-* [Random Word API](https://random-word-api.herokuapp.com/word)
-* [Coolers Color Scheme Generator](https://coolors.co/palette/471ca8-884ab2-ff930a-f24b04-d1105a)
-* [Animated Background Gradient - RedStapler Codepen](https://codepen.io/redstapler/pen/LMyLxP)
-* [Loading.io CSS Spinner](https://loading.io/css/)
 
 ---
 
